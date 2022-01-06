@@ -19,6 +19,9 @@ variables:
         # Tell Symfony to always install in production-mode.
         APP_ENV: 'prod'
         APP_DEBUG: 0
+    php:
+        # https://docs.platform.sh/languages/php.html#opcache-preloading
+        opcache.preload: 'config/preload.php'
 
 # The hooks that will be performed when the package is deployed.
 hooks:
